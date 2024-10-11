@@ -28,7 +28,14 @@ const Products = () => {
   };
 
   // BEGIN (write your solution here)
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const productsFromAPI = await getProducts();
+      setProducts(productsFromAPI);
+    };
 
+    fetchProducts();
+  }, []);
   // END
 
   return (

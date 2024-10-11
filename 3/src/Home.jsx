@@ -4,8 +4,9 @@ import ThemeContext from './contexts';
 
 const Home = () => {
   // BEGIN (write your solution here)
-
-  // END
+    const { currentTheme } = useContext(ThemeContext);
+    const className = currentTheme.className;
+    // END
 
   return (
     <article className={className}>

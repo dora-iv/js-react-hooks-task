@@ -5,7 +5,7 @@ import ThemeContext from './contexts';
 
 const ThemeSwitcher = () => {
   // BEGIN (write your solution here)
-
+  const { themes, currentTheme, setTheme } = useContext(ThemeContext);
   // END
 
   return (
@@ -17,7 +17,7 @@ const ThemeSwitcher = () => {
           type="radio"
           name="radio"
           value={curTheme.name}
-          checked={curTheme.name === theme.name}
+          checked={curTheme.name === currentTheme.name}
           onChange={() => setTheme(curTheme)}
         >
           {curTheme.name}
